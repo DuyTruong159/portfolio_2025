@@ -26,4 +26,4 @@ function updateLoading() {
     }
 }
 
-updateLoading();
+// updateLoading();

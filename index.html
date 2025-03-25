@@ -6,28 +6,18 @@
     <title>Truong Pham | Portfolio</title>
     <meta name="description" content="Portfolio of Truong Pham">
 
+    <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
+    <script type="module" src="js/ogl.js" defer></script>
 
     <link href="https://fonts.cdnfonts.com/css/hvdtrial-graphit" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
     <script src="https://kit.fontawesome.com/4dbfaa32c4.js" crossorigin="anonymous"></script>
-</head>
 <body>
-    <section id="load">
-        <div>
-            <h1>PORTFOLIO</h1>
-            <div id="ring">
-                <div></div>
-                <div>1%</div>
-            </div>
-        </div>
-        <div id="progress"></div>
-    </section>
-
     <header>
         <div id="bg-blur"></div>
         <div>
@@ -49,8 +39,23 @@
     </header>    
 
     <section id="home">
-        <h2>Hello, I am ...</h2>
+        <h2>Hello I'm Truong Pham</h2>
         <p><span>SOFTWARE</span> DEVELOPER</p>
+        <div class="btnStart" onclick="window.location.href='#about'">
+            <div></div>
+            <a>
+                SCROLL DOWN<br>
+                <i class="fas fa-angle-down"></i>
+            </a>
+        </div>
     </section>
+
+    <div>
+        <section id="about">
+            <h3>ABOUT ME</h3>
+            <p>I am a Full Stack Developer with 5 years of experience in building and optimizing web and mobile applications.</p>
+            <p>Skilled in managing multiple projects, meeting tight deadlines, and delivering high-quality solutions. I excel at problem-solving, communicating technical ideas, and adapting to new technologies. With a team-first mindset, I'm committed to delivering efficient and scalable software.</p>
+        </section>
+    </div>
 </body>
 </html>

@@ -2,9 +2,13 @@ html {
     scroll-behavior: smooth;
 }
 
-body, h1 {
+body, h1, h3 {
     margin: 0;
     color: #FFFFFF;
+}
+
+h3 {
+    margin-bottom: 40px;
 }
 
 menu {
@@ -24,8 +28,11 @@ a {
 
 body {
     background: url(../img/bg-load.jpg) no-repeat;
-    background-size: cover;
     height: 100vh;
+}
+
+body > div {
+    background: linear-gradient(180deg, transparent, #070A29 20%, #070A29 31%, #0B1043 45.07%, #0D1568 56.16%, #0B1043 62.92%, #070A29 77.85%, #070A29 100%);
 }
 
 #load {
@@ -41,6 +48,7 @@ body {
     top: 0;
     width: 70%;
     transition: opacity 0.75s, visibility 0.75s;
+    z-index: 999;
 }
 
 #load.hide {
@@ -154,6 +162,7 @@ header > div:last-child {
     flex-direction: column;
     justify-content: center;
     padding: 0 15%;
+    position: relative;
 }
 
 #home h2 {
@@ -174,6 +183,34 @@ header > div:last-child {
     -webkit-background-clip: text;
             background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+#home .btnStart {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#home .btnStart a {
+    font-family: "Open Sans", sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70px;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+#about {
+    font-family: "Fira Code", monospace;
+    text-align: center;
+    padding: 0 15%;
+}
+
+#about h3 {
+    font-size: 5.3vw;
 }
 
 @media screen and (max-width: 768px) {
