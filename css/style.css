@@ -110,11 +110,16 @@ body > div {
 }
 
 header {
-    display: none;
+    display: block;
     font-family: 'HvDTrial Graphit', sans-serif;
     position: fixed;
     width: 100%;
     height: 80px;
+    z-index: 999;
+}
+
+header menu a:hover {
+    color: #A89CE2;
 }
 
 header #bg-blur {
@@ -207,14 +212,45 @@ header > div:last-child {
     z-index: -1;
 }
 
-#about {
+#about, #projects {
     font-family: "Fira Code", monospace;
     text-align: center;
-    padding: 0 15%;
+    padding: 100px 15%;
 }
 
-#about h3 {
+#about h3, #projects h3 {
     font-size: 5.3vw;
+}
+
+#about img {
+    width: 35px;
+    height: auto;
+    z-index: 1;
+}
+
+#about > div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 48px;
+}
+
+#about > div > div {
+    width: 65px;
+    height: 65px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#about > div > div > div {
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    background: #251C31;
+    border-radius: 50%;
 }
 
 @media screen and (max-width: 768px) {
@@ -224,5 +260,9 @@ header > div:last-child {
 
     header menu {
         display: none;
+    }
+
+    #about h3, #projects h3 {
+        font-size: 11vw;
     }
 }

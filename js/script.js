@@ -78,4 +78,4 @@ function updateLoading() {
     }
 }
 
-// updateLoading();
+updateLoading();
