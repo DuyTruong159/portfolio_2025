@@ -2,7 +2,7 @@ html {
     scroll-behavior: smooth;
 }
 
-body, h1, h3 {
+body, h1, h3, h4 {
     margin: 0;
     color: #FFFFFF;
 }
@@ -122,6 +122,12 @@ header menu a:hover {
     color: #A89CE2;
 }
 
+header menu > div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
 header #bg-blur {
     height: 80px;
     width: 100%;
@@ -159,6 +165,12 @@ header > div:last-child {
 
 #mobile menu li {
     padding: 15px;
+}
+
+#mobile menu li:last-child {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 #home {
@@ -212,13 +224,13 @@ header > div:last-child {
     z-index: -1;
 }
 
-#about, #projects {
+#about {
     font-family: "Fira Code", monospace;
     text-align: center;
     padding: 100px 15%;
 }
 
-#about h3, #projects h3 {
+#about h3 {
     font-size: 5.3vw;
 }
 
@@ -253,6 +265,86 @@ header > div:last-child {
     border-radius: 50%;
 }
 
+#projects {
+    font-family: "Fira Code", monospace;
+    padding: 100px 15%;
+}
+
+#projects img {
+    width: 100%;
+    height: 25vh;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px 10px 0 0;
+}
+
+#projects h3 {
+    font-size: 5.3vw;
+    text-align: center;
+}
+
+#projects h4 {
+    font-size: 18px;
+}
+
+#projects p {
+    margin: 18px 0;
+    font-size: 14px;
+}
+
+#projects span {
+    background: #615FFF;
+    border-radius: 2px;
+    padding: 2px;
+    font-size: 11px;
+}
+
+#projects > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 35px;
+}
+
+#projects > div > div {
+    width: 30%;
+    border: 1px solid #1D293D;
+    border-radius: 10px;
+    background-color: #020618;
+    transition: transform 0.3s ease-in-out;
+}
+
+#projects > div > div:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+#projects > div > div > div {
+    border-radius: 0 0 10px 10px;
+    padding: 25px;
+    margin-top: -5px;
+}
+
+#projects > div > div > div > a:last-child {
+    background-color: #45556C;
+    padding: 8px 10px;
+    font-size: 12px;
+    border-radius: 5px;
+}
+
+#projects > div > div > div > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 25px;
+}
+
+@media screen and (max-width: 1024px) {
+    #projects > div > div {
+        width: 45%;
+    }
+}
+
 @media screen and (max-width: 768px) {
     #mobile {
         display: block;
@@ -264,5 +356,9 @@ header > div:last-child {
 
     #about h3, #projects h3 {
         font-size: 11vw;
+    }
+
+    #projects > div > div {
+        width: 100%;
     }
 }
