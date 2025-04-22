@@ -276,6 +276,7 @@ header > div:last-child {
     object-fit: cover;
     object-position: center;
     border-radius: 10px 10px 0 0;
+    background-color: #fff;
 }
 
 #projects h3 {
@@ -307,7 +308,7 @@ header > div:last-child {
 }
 
 #projects > div > div {
-    width: 30%;
+    width: 23%;
     border: 1px solid #1D293D;
     border-radius: 10px;
     background-color: #020618;
@@ -325,6 +326,11 @@ header > div:last-child {
     margin-top: -5px;
 }
 
+#projects > div > div > div > p:first-child{
+    font-size: 11px;
+    color: #FFB86A;
+}
+
 #projects > div > div > div > a:last-child {
     background-color: #45556C;
     padding: 8px 10px;
@@ -339,9 +345,9 @@ header > div:last-child {
     margin-bottom: 25px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1600px) {
     #projects > div > div {
-        width: 45%;
+        width: 30%;
     }
 }
 
