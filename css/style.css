@@ -345,6 +345,90 @@ header > div:last-child {
     margin-bottom: 25px;
 }
 
+#contact {
+    font-family: "Fira Code", monospace;
+    padding: 100px 15%;
+    text-align: center;
+}
+
+#contact h3 {
+    font-size: 5.3vw;
+    text-align: center;
+}
+
+#contact p {
+    line-height: 1.7;
+}
+
+#contact span {
+    color: #CBACF9;
+}
+
+#contact label {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#contact input:not([type="submit"]) { 
+    width: 100%;
+    outline: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+#contact input[type="submit"] {
+    margin: 18px 0;
+    padding: 17px 30px;
+    color: #fff;
+    font-weight: bold;
+    background: linear-gradient(to right, #7077DD 20%, #AC9FE3, #7077DD 80%);
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+}
+
+#contact input::placeholder { 
+    color: #90A1B980;
+}
+
+#contact textarea {
+    width: 100%;
+    padding: 24px;
+    background-color: #22344F40;
+    border: none;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 18px;
+    resize: none;
+}
+
+#contact textarea::placeholder {
+    color: #90A1B9;
+}
+
+#contact hr {
+    margin: 28px 0 28px 0;
+    border-color: #ffffff1a;
+}
+
+#contact form {
+    border: 1px solid #1D293D;
+    border-radius: 10px;
+    padding: 25px;
+    background-color: #020618;
+}
+
+#contact form > div:last-child {
+    flex-direction: row-reverse
+}
+
+#contact div {
+    display: flex;
+    gap: 8px;
+}
+
 @media screen and (max-width: 1600px) {
     #projects > div > div {
         width: 30%;
@@ -360,7 +444,7 @@ header > div:last-child {
         display: none;
     }
 
-    #about h3, #projects h3 {
+    #about h3, #projects h3, #contact h3 {
         font-size: 11vw;
     }
 
