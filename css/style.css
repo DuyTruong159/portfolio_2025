@@ -27,8 +27,6 @@ a {
 }
 
 body {
-    background: url(../img/bg-load.jpg) no-repeat;
-    background-size: cover;
     height: 100vh;
 }
 
@@ -110,7 +108,7 @@ body > div {
 }
 
 header {
-    display: block;
+    display: none;
     font-family: 'HvDTrial Graphit', sans-serif;
     position: fixed;
     width: 100%;
@@ -174,6 +172,8 @@ header > div:last-child {
 }
 
 #home {
+    background: url(../img/bg-load.jpg) no-repeat;
+    background-size: cover;
     font-family: 'HvDTrial Graphit', sans-serif;
     height: 100vh;
     display: flex;
@@ -225,9 +225,13 @@ header > div:last-child {
 }
 
 #about {
+    height: 100vh;
     font-family: "Fira Code", monospace;
     text-align: center;
-    padding: 100px 15%;
+    padding: 0 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #about h3 {
@@ -255,6 +259,12 @@ header > div:last-child {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+#about > div > div:hover {
+    transform: scale(1.3);
+    transition: transform 0.3s ease-in-out;
 }
 
 #about > div > div > div {
@@ -442,6 +452,12 @@ header > div:last-child {
 
     header menu {
         display: none;
+    }
+
+    #about {
+        height: auto;
+        padding: 100px 15%;
+        display: block
     }
 
     #about h3, #projects h3, #contact h3 {
