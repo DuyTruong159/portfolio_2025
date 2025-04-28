@@ -79,3 +79,44 @@ function updateLoading() {
 }
 
 updateLoading();
+
+async function sendEmail() {
+    var data = {
+        service_id: 'service_su2r0bk',
+        template_id: 'template_nitjem9',
+        user_id: 'yJXrAvnwfSJ_z8eHP',
+        template_params: {
+            'title': 'Portfolio Notification',
+            'name': document.getElementById('name').value,
+            'time': new Date().toLocaleString(),
+            'message': `Email: ${document.getElementById('email').value}\n\nMessage: ${document.getElementById('message').value}`
+        }
+    };
+
+    await fetch("https://api.emailjs.com/api/v1.0/email/send", {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+            "Content-Type": "application/json"
+        }
+    })
+    .then(response => {
+        if (response.ok) {
+            alert('Message sent successfully!');
+            document.querySelector('form').reset();
+        } else {
+            return response.text().then(text => {
+                throw new Error(`Failed to send email: ${text}`);
+            });
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('There was an error sending your message. Please try again later.');
+    });;
+}
+
+document.querySelector('form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    sendEmail();
+});

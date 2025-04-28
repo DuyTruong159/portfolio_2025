@@ -31,7 +31,7 @@ body {
 }
 
 body > div {
-    background: linear-gradient(180deg, transparent, #070A29 20%, #070A29 31%, #0B1043 45.07%, #0D1568 56.16%, #0B1043 62.92%, #070A29 77.85%, #070A29 100%);
+    background: linear-gradient(180deg, #070A29 0%, #070A29 31%, #0B1043 42.16%, #10165C 55.44%, #0B1043 63.56%, #070A29 77.85%, #070A29 100%);
 }
 
 #load {
@@ -181,6 +181,7 @@ header > div:last-child {
     justify-content: center;
     padding: 0 15%;
     position: relative;
+    box-shadow: inset 0px -20px 30px 0px #080a29;
 }
 
 #home h2 {
